@@ -12,7 +12,9 @@ public class Department {
 	public int numOfStudents() {
 		return students.size();
 	}
-	
+	public void declareResult() {
+		System.out.println("Declare result");
+	}
 	public void conductClasses() {
 	}
 	
@@ -27,7 +29,5 @@ public class Department {
 	public void conductAttendance() {
 	}
 
-	public void declareResult() {
-	}
 
 }

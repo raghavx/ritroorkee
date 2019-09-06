@@ -16,6 +16,8 @@ public class University {
 	}
 	
 	public void declareResult() {
-		
+		for(Department d : departments) {
+			d.declareResult();
+		}
 	}
 }
