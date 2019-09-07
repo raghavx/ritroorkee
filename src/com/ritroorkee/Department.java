@@ -1,5 +1,6 @@
 package com.ritroorkee;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Department {
@@ -8,12 +9,16 @@ public class Department {
 	private int numOfFac;
 	
 	private List<Student> students;
-	
+	public Department() {
+		this.students = new ArrayList<Student>();
+	}
 	public int numOfStudents() {
 		return students.size();
 	}
 	public void declareResult() {
-		System.out.println("Declare result");
+		for(Student s : students) {
+			s.declareResult();
+		}
 	}
 	public void conductClasses() {
 	}

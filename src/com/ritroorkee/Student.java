@@ -10,4 +10,8 @@ public class Student {
 
 	private void play() {
 	}
+	
+	public void declareResult() {
+		System.out.println("Result received by student");
+	}
 }
