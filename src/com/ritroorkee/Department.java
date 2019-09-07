@@ -35,6 +35,10 @@ public class Department {
 			s.declareResult();
 		}
 	}
+	
+	public void addStudent(Student s) {
+		this.students.add(s);
+	}
 	public void conductClasses() {
 	}
 	
