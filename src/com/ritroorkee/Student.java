@@ -4,7 +4,10 @@ public class Student {
 
 	private String name;
 	private long roll;
-
+	public Student(String name, int roll) {
+		this.name = name;
+		this.roll = roll;
+	}
 	private void study() {
 	}
 

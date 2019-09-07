@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Department {
-
+	private int id;
 	private String name;
 	private int numOfFac;
 	
@@ -12,6 +12,21 @@ public class Department {
 	public Department() {
 		this.students = new ArrayList<Student>();
 	}
+	
+	public Department(String name, int id) {
+		this.students = new ArrayList<Student>();
+		this.name = name;
+		this.id = id;
+	}
+	
+	public Department(int id) {
+		this.id = id;
+	}
+	
+	public Department(String name) {
+		this.name = name;
+	}
+	
 	public int numOfStudents() {
 		return students.size();
 	}
