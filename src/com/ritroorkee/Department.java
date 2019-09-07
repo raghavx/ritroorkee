@@ -1,6 +1,7 @@
 package com.ritroorkee;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 public class Department {
@@ -10,7 +11,7 @@ public class Department {
 	
 	private List<Student> students;
 	public Department() {
-		this.students = new ArrayList<Student>();
+		this.students = new LinkedList<Student>();
 	}
 	
 	public Department(String name, int id) {
