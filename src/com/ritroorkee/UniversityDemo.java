@@ -10,6 +10,8 @@ public class UniversityDemo {
 		
 		Student s = new Student("Raghav",1);
 		cse.addStudent(s);
+		s = new Student("Xyz",2);
+		cse.addStudent(s);
 		
 		u.declareResult();
 	}
