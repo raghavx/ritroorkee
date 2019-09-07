@@ -1,6 +1,7 @@
 package com.ritroorkee;
 
-public class DotMatrixPrinter implements IPrinter {
+public class DotMatrixPrinter 
+		implements IPrinter {
 
 	@Override
 	public void print() {

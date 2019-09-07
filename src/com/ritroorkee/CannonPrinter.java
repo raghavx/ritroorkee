@@ -1,6 +1,7 @@
 package com.ritroorkee;
 
-public class CannonPrinter implements IPrinter {
+public class CannonPrinter 
+		implements IPrinter {
 
 	@Override
 	public void print() {
