@@ -3,11 +3,17 @@ package com.ritroorkee;
 public class Secretary extends Employee implements Comparable<Secretary> {
 
 	private final int id;
+	private final String name;
 
-	public Secretary(int id) {
+	public Secretary(int id, String name) {
 		this.id = id;
+		this.name = name;
 	}
 
+	public String getName() {
+		return name;
+	}
+	
 	public int getId() {
 		return id;
 	}
@@ -20,7 +26,13 @@ public class Secretary extends Employee implements Comparable<Secretary> {
 	@Override
 	public int compareTo(Secretary o) {
 
-		return o.id - id;
+		return id - o.id;
+	}
+	
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return " name: "+name+",   id: "+id;
 	}
 
 }
