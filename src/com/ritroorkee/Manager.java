@@ -9,4 +9,10 @@ Cloneable, Comparable<Manager>
 		System.out.println("Manager do work");
 	}
 
+	@Override
+	public int compareTo(Manager o) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
 }
