@@ -1,6 +1,8 @@
 package com.ritroorkee;
 
-public class Manager extends Employee {
+public class Manager extends Employee implements
+Cloneable, Comparable<Manager> 
+{
 
 	@Override
 	public void doWork() {
