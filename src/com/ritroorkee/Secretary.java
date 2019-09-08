@@ -8,7 +8,12 @@ public class Secretary extends Employee implements Comparable<Secretary> {
 
 	public Secretary(int id, String name, String dept) {
 		this.id = id;
+		if (dept == null) {
+			throw new RuntimeException("Dept cannot be null ");
+		}
+
 		this.name = name;
+
 		this.dept = dept;
 	}
 
@@ -38,7 +43,7 @@ public class Secretary extends Employee implements Comparable<Secretary> {
 	@Override
 	public String toString() {
 		// TODO Auto-generated method stub
-		return " name: " + name + ",   id: " + id +",   dept :"+dept;
+		return " name: " + name + ",   id: " + id + ",   dept :" + dept;
 	}
 
 }

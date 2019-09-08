@@ -18,8 +18,14 @@ public class ComparisionMain {
 		Secretary sx = new Secretary(1, "Sikha", "HR");
 		ss.add(sx);
 
-		Secretary maurya = new Secretary(3, "Maurya G", "CSE");
-		ss.add(maurya);
+		Secretary maurya;
+		try {
+			// https://docs.oracle.com/javase/7/docs/api/java/lang/Throwable.html
+			maurya = new Secretary(3, "Maurya G", null);
+			ss.add(maurya);
+		} catch (Exception e) {
+			
+		}
 
 		maurya = new Secretary(4, "Luv G", "Mech");
 		ss.add(maurya);
