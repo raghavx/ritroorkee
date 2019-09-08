@@ -4,18 +4,24 @@ public class Secretary extends Employee implements Comparable<Secretary> {
 
 	private final int id;
 	private final String name;
+	private final String dept;
 
-	public Secretary(int id, String name) {
+	public Secretary(int id, String name, String dept) {
 		this.id = id;
 		this.name = name;
+		this.dept = dept;
 	}
 
 	public String getName() {
 		return name;
 	}
-	
+
 	public int getId() {
 		return id;
+	}
+
+	public String getDept() {
+		return dept;
 	}
 
 	@Override
@@ -28,11 +34,11 @@ public class Secretary extends Employee implements Comparable<Secretary> {
 
 		return id - o.id;
 	}
-	
+
 	@Override
 	public String toString() {
 		// TODO Auto-generated method stub
-		return " name: "+name+",   id: "+id;
+		return " name: " + name + ",   id: " + id +",   dept :"+dept;
 	}
 
 }
