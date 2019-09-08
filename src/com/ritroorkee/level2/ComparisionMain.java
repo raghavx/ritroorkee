@@ -15,28 +15,39 @@ public class ComparisionMain {
 		Secretary aman = new Secretary(22, "XAman", "HR");
 		ss.add(aman);
 
-		Secretary sx = new Secretary(1, "Sikha", "CSE");
+		Secretary sx = new Secretary(1, "Sikha", "HR");
 		ss.add(sx);
 
-		Secretary maurya = new Secretary(3, "Maurya G", "XABC");
+		Secretary maurya = new Secretary(3, "Maurya G", "CSE");
+		ss.add(maurya);
+
+		maurya = new Secretary(4, "Luv G", "Mech");
+		ss.add(maurya);
+
+		maurya = new Secretary(5, "Pooja G", "Mech");
+		ss.add(maurya);
+
+		maurya = new Secretary(10, "Sandeep G", "Mech");
+		ss.add(maurya);
+
+		maurya = new Secretary(7, "Deepa G", "CSE");
 		ss.add(maurya);
 
 		ss.forEach(s -> System.out.println(s));
-		Collections.sort(ss, (o1, o2) -> o2.getName().compareTo(o1.getName()));
-		System.out.println("----After SOrt---");
-		ss.forEach(s -> System.out.println(s));
-		System.out.println("--- sort by dept name ---- ");
+		System.out.println("----------------");
 		Collections.sort(ss, new Comparator<Secretary>() {
 
 			@Override
 			public int compare(Secretary o1, Secretary o2) {
-				return o2.getDept().compareTo(o1.getDept());
+				int result = o1.getDept().compareTo(o2.getDept());
+				if (result == 0) {
+					result = o1.getName().compareTo(o2.getName());
+				}
+				return result;
 			}
 
 		});
-		
 		ss.forEach(s -> System.out.println(s));
-
 
 	}
 }
