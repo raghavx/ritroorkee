@@ -6,7 +6,7 @@ public class Main {
 	public static void main(String[] args) {
 		Employee e = new Manager();
 		e.doWork();
-		e = new Secretary();
+		e = new Secretary(1);
 		e.doWork();
 	}
 
