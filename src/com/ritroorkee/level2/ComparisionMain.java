@@ -35,18 +35,9 @@ public class ComparisionMain {
 
 		ss.forEach(s -> System.out.println(s));
 		System.out.println("----------------");
-		Collections.sort(ss, new Comparator<Secretary>() {
-
-			@Override
-			public int compare(Secretary o1, Secretary o2) {
-				int result = o1.getDept().compareTo(o2.getDept());
-				if (result == 0) {
-					result = o1.getName().compareTo(o2.getName());
-				}
-				return result;
-			}
-
-		});
+		Collections.sort(ss, 
+				Comparator.comparing(Secretary::getDept)
+				.thenComparing(Secretary::getName));
 		ss.forEach(s -> System.out.println(s));
 
 	}
