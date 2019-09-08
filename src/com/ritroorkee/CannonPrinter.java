@@ -5,8 +5,9 @@ public class CannonPrinter
 
 	@Override
 	public void print() {
-
-		System.out.println("Cannon prointer in progress");
+		System.out.println(
+				"Cannon prointer "
+				+ "in progress");
 	}
 
 }
